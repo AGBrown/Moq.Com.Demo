@@ -41,6 +41,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Moq.Com.Demo.Main\Moq.Com.Demo.Main.csproj">
+      <Project>{b3471e80-24aa-47e7-b9a3-f972e35df93f}</Project>
+      <Name>Moq.Com.Demo.Main</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
