@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.OLE.Interop;
+﻿using Microsoft.Office.Interop.Excel;
 using NUnit.Framework;
 
 namespace Moq.Com.Demo
@@ -9,7 +9,7 @@ namespace Moq.Com.Demo
         [Test]
         public void TypesAreEquivalent()
         {
-            var testDllType = typeof(IBinding);
+            var testDllType = typeof(Application);
             var mainDllType = BindingWrapper.WrappedType();
 
             //  ASSERT --------------------------------------------------------

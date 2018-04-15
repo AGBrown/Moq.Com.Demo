@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.OLE.Interop;
+using Microsoft.Office.Interop.Excel;
 
 namespace Moq.Com.Demo
 {
@@ -7,7 +7,7 @@ namespace Moq.Com.Demo
     {
         public static Type WrappedType()
         {
-            return typeof(IBinding);
+            return typeof(Application);
         }
     }
 }
