@@ -7,7 +7,7 @@ namespace Moq.Com.Demo
     public class TypeEquivalenceFixture
     {
         [Test]
-        public void TypesAreNotEquivalent()
+        public void TypesAreEquivalent()
         {
             var testDllType = typeof(Application);
             var testDllType2 = typeof(Application);
@@ -16,8 +16,8 @@ namespace Moq.Com.Demo
             //  ASSERT --------------------------------------------------------
             Assert.Multiple(() => {
                 Assert.That(testDllType, Is.SameAs(testDllType2));
-                Assert.That(testDllType, Is.Not.SameAs(mainDllType));
-                Assert.That(testDllType, Is.Not.EqualTo(mainDllType));
+                Assert.That(testDllType, Is.SameAs(mainDllType));
+                Assert.That(testDllType, Is.EqualTo(mainDllType));
             });
         }
     }
