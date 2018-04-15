@@ -7,13 +7,18 @@ namespace Moq.Com.Demo
 {
     [TestFixture] public class FooClassFixture
     {
+        public enum UseMainTestInput { UseMain, UseTest }
         public enum AssertionTestInput { AssertActual, VerifyMock }
 
         [Test]
         public void DoWork(
+            [Values] UseMainTestInput useTypeFrom, 
             [Values] AssertionTestInput assertion)
         {
-            DoWork<FooClass>(assertion);
+            if (useTypeFrom == UseMainTestInput.UseMain)
+                DoWork<FooClass>(assertion);
+            else
+                DoWork<FooClass<Application>>(assertion);
         }
 
         public void DoWork<T>(AssertionTestInput assertion)

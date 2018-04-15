@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="BindingWrapper.cs" />
     <Compile Include="FooClass.cs" />
+    <Compile Include="FooClassGeneric.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
